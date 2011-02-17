@@ -1,3 +1,26 @@
+m92o's fork
+------------
+
+ Added xAuth support.
+
+m92o's fork How to use (xAuth)
+------------
+	Ti.include("lib/twitter_api.js");
+	//initialization
+	Ti.App.twitterApi = new TwitterApi({
+		consumerKey:'YOUR CONSUMER KEY of twitter API',
+		consumerSecret:'YOUR SECRET of twitter API',
+		username: 'YOUR USERNAME',	// xAuth only 
+		password: 'YOUR PASSWORD'	// xAuth only
+	});
+	var twitterApi = Ti.App.twitterApi;
+	twitterApi.init(); 
+
+m92o's fork Japanese
+------------
+
+ xAuthに対応させました。
+
 twitter\_api.js
 ------------
 
