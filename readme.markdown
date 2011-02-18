@@ -2,6 +2,7 @@ m92o's fork
 ------------
 
  Added xAuth support.
+ Added deleteAccessToken method.
 
 m92o's fork How to use (xAuth)
 ------------
@@ -9,12 +10,19 @@ m92o's fork How to use (xAuth)
 	//initialization
 	Ti.App.twitterApi = new TwitterApi({
 		consumerKey:'YOUR CONSUMER KEY of twitter API',
-		consumerSecret:'YOUR SECRET of twitter API',
-		username: 'YOUR USERNAME',	// xAuth only 
-		password: 'YOUR PASSWORD'	// xAuth only
+		consumerSecret:'YOUR SECRET of twitter API'
 	});
 	var twitterApi = Ti.App.twitterApi;
-	twitterApi.init(); 
+	twitterApi.init({
+		username: 'YOUR USERNAME',
+		password: 'YOUR PASSWORD',
+		onSuccess: function () {
+			// success callback function
+		},
+		onError: function (error) {
+			// error callback function
+		}
+	});
 
 m92o's fork Japanese
 ------------
